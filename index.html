@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakhar Kumar - Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container"> <img id="profile-pic" src="https://avatars.githubusercontent.com/u/38582421?v=4" alt="Profile Picture">
+            <div class="profile-details">
+                <h2>Prakhar Kumar</h2>
+                <h2>Software Developer</h2>
+                <p class="tagline">In Code We Trust, In Innovation We Thrive.</p>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="about">
+        <div class="container">
+            <div class="about-card">
+                <h2>About Me</h2>
+                <p>Passionate computer science graduate with a knack for problem-solving and a drive for innovation. Eager to embark on challenging projects and contribute to cutting-edge technology solutions.</p>
+            </div>
+        </div>
+    </section>
+    <!--Skill Section-->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Arsenal</h2>
+            <div class="skills-container">
+                <div class="skills-card">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skills-card">
+                    <h3>Frameworks</h3>
+                    <ul>
+                        <li>Spring Boot</li>
+                        <li>Django</li>
+                    </ul>
+                </div>
+                <div class="skills-card">
+                    <h3>Technologies</h3>
+                    <ul>
+                        <li>Postman</li>
+                        <li>RestAPI</li>
+                        <li>GIT</li>
+                        <li>SQL/MongoDB/PostgreSQL</li>
+                        <li>HTML/CSS</li>
+                        <li>Maven</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Project Section-->
+    <section id="projects" class="animate-left">
+        <div class="container">
+            <h2>Learning Quests</h2> <!-- Project 1: Bluetooth Controlled Bot -->
+            <div class="project-card">
+                <h3>Bluetooth Controlled Bot (05/2018 - 05/2018)</h3>
+                <p>Developed a bot car controlled via Bluetooth using an Arduino UNO and an Android phone.</p>
+            </div> <!-- Project 2: Automated Bot Car -->
+            <div class="project-card">
+                <h3>Automated Bot Car (05/2021 - 06/2021)</h3>
+                <p>Utilized a Raspberry Pi as a development board to collect sensor data and make decisions regarding movement direction.</p>
+            </div> <!-- Project 3: Gym Database Management -->
+            <div class="project-card">
+                <h3>Gym Database Management (07/2019 - 07/2019)</h3>
+                <p>Led the development of a web-based system using HTML, CSS, and JS for the frontend, and JAVA with MySQL for the backend.</p>
+            </div>
+        </div>
+    </section>
+    <section id="additional-projects" class="animate-right">
+        <div class="container">
+            <h2>Personal Triumphs</h2> <!-- Project 1: Additional Project 1 -->
+            <div class="project-card">
+                <h3>Hotel Rating Application(Backend)</h3>
+                <p>A Spring Boot microservices project utilizing Eureka and Feign for seamless communication, with integrated Resilience4j for enhanced fault tolerance and circuit breaker patterns.</p> <!-- Update the button with a data attribute --> <button onclick="openProjectModal('modal-project1')" class="btn-open-modal" data-modal-id="modal-project1">Delve into My Projects</button> <a href="https://github.com/prakhar2451/HotelRatingManagementApplication" target="_blank" class="github-link"> <i class="fab fa-github"></i> View Repository </a>
+            </div> <!-- Project 2: Additional Project 2 -->
+            <div class="project-card">
+                <h3>Blogging Application (Backend)</h3>
+                <p>A secure monolithic backend for a blogging app using Spring Boot, featuring REST APIs, JWT authentication, and MySQL integration.</p> <!-- Update the button with a data attribute --> <button onclick="openProjectModal('modal-project2')" class="btn-open-modal" data-modal-id="modal-project2">Delve into My Projects</button> <a href="https://github.com/prakhar2451/blogging_app_backend" target="_blank" class="github-link"> <i class="fab fa-github"></i> View Repository </a>
+            </div> <!-- Add more additional projects as needed -->
+            <!-- Modal Structure for Additional Project 1 -->
+            <div id="modal-project1" class="modal">
+                <div class="modal-content"> <span class="close" onclick="closeProjectModal('modal-project1')">&times;</span>
+                    <h4>Hotel Rating Application (Spring Boot)</h4>
+                    <h5>Description</h5>
+                    <p>An application for rating hotels, built using Spring Boot microservices architecture.</p> <!-- Subsection: Microservices -->
+                    <h5>Microservices</h5>
+                    <ul>
+                        <li>Service Registry</li>
+                        <li>User Service</li>
+                        <li>Rating Service</li>
+                        <li>Hotel Service</li>
+                        <li>API Gateway</li>
+                        <li>Config Server</li>
+                    </ul> <!-- Subsection: Technologies -->
+                    <h5>Technologies</h5>
+                    <ul>
+                        <li>Spring Boot</li>
+                        <li>Eureka Discovery Client</li>
+                        <li>Feign Client</li>
+                        <li>Resilience4j (Circuit Breaker & Fault Tolerance)</li>
+                        <li>MySQL + PostgreSQL + MongoDB</li>
+                    </ul> <!-- Subsection: Description -->
+                    <h5>Project Overview</h5>
+                    <p> The Hotel Rating Application is a Spring Boot project that utilizes a microservices architecture for scalability and maintainability. It consists of six microservices responsible for different aspects of the application, including service registration, user management, hotel ratings, and more. The Eureka Discovery Client ensures seamless communication between the microservices, while Feign Client simplifies service-to-service calls. Additionally, Resilience4j is integrated for implementing circuit breaker patterns and fault tolerance, enhancing the application's robustness. </p>
+                </div>
+            </div> <!-- Modal Structure for Additional Project 2 -->
+            <div id="modal-project2" class="modal">
+                <div class="modal-content"> <span class="close" onclick="closeProjectModal('modal-project2')">&times;</span>
+                    <h4>Blogging Application (Spring Boot)</h4>
+                    <h5>Description</h5>
+                    <p>Built a secure and efficient monolithic backend for a feature-rich blogging application using Spring Boot, integrating services for comments, users, categories, and posts, and employing JWT authentication on a MySQL database.</p> <!-- Subsection: Microservices -->
+                    <h5>Microservices</h5>
+                    <ul>
+                        <li>User Service</li>
+                        <li>Post Service</li>
+                        <li>Comment Service</li>
+                        <li>Category Service</li>
+                    </ul> <!-- Subsection: Technologies -->
+                    <h5>Technologies</h5>
+                    <ul>
+                        <li>Spring Boot</li>
+                        <li>MySQL</li>
+                        <li>Postman</li>
+                    </ul> <!-- Subsection: Description -->
+                    <h5>Project Overview</h5>
+                    <p> Developed a robust backend for a comprehensive blogging application using Spring Boot, following a monolithic architecture. This application incorporates essential services like Comment, User, Category, and Post handling. Security measures were reinforced with JSON Web Tokens (JWT), while MySQL was utilized as the primary database. Rigorous testing was conducted using Postman API for seamless functionality and performance </p>
+                </div>
+            </div>
+    </section> <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Odyssey</h2> <!-- Experience Card 1 -->
+            <div class="experience-card">
+                <h3>Machine Learning Associate at Gfactors</h3>
+                <p>Developed machine learning solutions for text data processing and analysis.</p> <button onclick="openExperienceModal('modal-experience1')" class="btn-open-modal" data-modal-id="modal-experience1">See My Impact</button>
+            </div> <!-- Add other experiences as needed -->
+        </div>
+    </section> <!-- Modal for Experience 1 -->
+    <div id="modal-experience1" class="modal">
+        <div class="modal-content"> <span class="modal-close" onclick="closeExperienceModal('modal-experience1')">&times;</span>
+            <h4>Machine Learning Associate at Gfactors</h4>
+            <ul>
+                <li>Developed machine learning solutions for text data processing and analysis.</li>
+                <li>Implemented data annotation tools and integrated with PostgreSQL database.</li>
+                <li>Collaborated with cross-functional teams to refine and optimize machine learning models.</li>
+                <li>Participated in code reviews and provided constructive feedback to improve code quality.</li>
+                <li>Utilized Git for version control and team collaboration on projects.</li>
+            </ul>
+        </div>
+    </div> <!-- Modal for Experience 2 -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-form">
+                <form> <input type="text" name="name" placeholder="Your Name"> <input type="email" name="email" placeholder="Your Email"> <textarea name="message" placeholder="Your Message"></textarea> <button type="submit">Send Message</button> </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CuriousTech</p>
+            <div class="social-links"> <a href="https://www.linkedin.com/in/prakhar-kumar-7678588a/" target="_blank"><i class="fab fa-linkedin"></i></a> <a href="https://github.com/prakhar2451" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
