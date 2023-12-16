@@ -1,5 +1,6 @@
 
     $(document).ready(function(){
+        // Smooth scrolling for navigation link
         $("#nav-projects").on('click', function(event) {
             event.preventDefault();
             var target = $(this).attr("href");
@@ -10,19 +11,18 @@
                 $(".animate-right").addClass("slide-in");
             });
         });
-    });
-    $(document).ready(function(){
-        $(window).on('scroll', function() {
+
+        //Handle scroll events with debouncing
+        $(window).on('scroll', _.debounce(function() {
             var scrollPosition = $(window).scrollTop();
     
             if (scrollPosition <= 0) {
                 $(".animate-left-out").removeClass("slide-out-left").addClass("animate-left fade-out");
                 $(".animate-right-out").removeClass("slide-out-right").addClass("animate-right fade-out");
             }
-        });
-    });
-    
-    $(document).ready(function(){
+        },200));
+
+        // Animation handling for skill section
         var skillsSection = $('#skills');
         var languagesOval = $('#languages-oval');
         var technologiesOval = $('#technologies-oval');
