@@ -9,27 +9,36 @@
 body {
     font-family: Avenir, sans-serif;
     line-height: 1.6;
-    background-color: #c0c8d0; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/portfolio-banner.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #333;
+    transition: background-image 0.5s ease, backgroud-position 0.5s ease;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 0px;
 }
 
 /* Header */
 header {
-    background:#00022e;
-    color: #ffffff;
+    background:transparent;
+    color: #333;
     text-align: center;
-    padding: 40px 0; /* Adjusted padding for header */
-    object-fit: contain;
+    padding: 0px 0px; /* Adjusted padding for header */
+    object-fit: cover;
+    height: auto;
+    position: relative;
 }
 header img {
     border-radius: 50%;
     max-width: 150px; /* Adjust the maximum width of the profile picture */
-    border: 2px solid #ffffff; /* Add a white border for contrast */
+    border: 1px solid #ffffff; /* Add a white border for contrast */
     aspect-ratio: 1/1; /* Ensures the image maintains its aspect ratio */
     object-fit: cover;
 }
@@ -52,16 +61,29 @@ header h2 {
 
 /* Navigation */
 .navbar {
-    background: #343a40;
-    padding: 5px 0;
-    border-bottom: 1px solid #666;
+    background: transparent;
+    padding: 10px 0;
+    /* border-bottom: px solid #666; */
     position: sticky;
     top: 0;
     z-index: 1;
 }
+.dark-mode .navbar {
+    background: #333; /* Dark background color */
+}
 
 .profile-details {
     margin-top: 20px;
+}
+
+#profile-pic {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px; /* Adjust the size of the profile picture */
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
 }
 
 .profile-details h1,
@@ -81,7 +103,7 @@ header h2 {
 
 .navbar a {
     text-decoration: none;
-    color: #ffffff;
+    color: #333;
     font-size: 1.2em;
     transition: color 0.3s;
 }
@@ -92,8 +114,8 @@ header h2 {
 
 /* Sections */
 section {
-    padding: 50px 0; /* Increased padding for sections */
-    margin-bottom: 20px;
+    padding: 20px 0; /* Increased padding for sections */
+    margin-bottom: 10px;
 }
 
 section h2 {
@@ -103,12 +125,12 @@ section h2 {
 
 /* Project cards */
 .project-card {
-    background: #ffffff;
+    background:transparent;
     padding: 30px;
-    margin: 20px 0;
+    margin: 5px 0;
     border-radius: 10px;
     margin-bottom: 30px;
-    box-shadow: 0px 4px 6px #00022e ; /* Subtle shadow for cards */
+    box-shadow: 0px 4px 6px #00022e ; 
 }
 
 .project-card p {
@@ -195,14 +217,14 @@ footer {
 }
 
 .skills-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: whitesmoke;
+    border: 0px solid #ccc;
     border-radius: 10px;
     margin: 10px;
     padding: 20px;
     max-width: 300px;
     width: 100%;
-    box-shadow: 0 4px 6px darkslategray;
+    box-shadow: 0px 4px 6px #00022e ; 
 }
 
 .skills-card h3 {

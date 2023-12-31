@@ -139,6 +139,76 @@ function closeExperienceModal(modalId) {
     modal.style.display = "none";
 }
 
+// JavaScript for background image change on scroll
+document.addEventListener("DOMContentLoaded", function () {
+    var body = document.body;
+    var scrollPosition = window.scrollY;
+    var initialBackgroundImage = "url('/assets/portfolio-banner.png')";
+    var newBackgroundImage = "url('/assets/portfolio-bg-img.png')";
+    var textColorLight = "#2CCED2";
+    var textColorDark = "#333333";
     
-    
+
+    // Function to update background image
+    function updateBackgroundImage() {
+        if (window.scrollY > scrollPosition) {
+            // Scrolling down, change background image
+            body.style.backgroundImage = newBackgroundImage;
+            body.style.backgroundPosition = "100% 0" // start fromt the right
+            setTextColor(textColorLight);
+
+        } else if(window.scrollY === 0) {
+                    // At the top, revert to the initial background image
+                    setTimeout(function(){
+                        body.style.backgroundImage = initialBackgroundImage;
+                        setTextColor(textColorDark);
+                    }, 500);
+                    body.style.backgroundPosition = "center"
+        }
+        // Update scroll position
+        scrollPosition = window.scrollY;
+    }
+
+    function setTextColor(color) {
+        var allTextElements = document.querySelectorAll('*');
+        allTextElements.forEach(function (element) {
+            // Check if the element has text content to avoid affecting non-text elements
+            if (element.nodeType === Node.ELEMENT_NODE && element.textContent.trim() !== '') {
+                element.style.color = color;
+            }
+        });
+    }
+
+    // Listen for scroll events
+    window.addEventListener("scroll", updateBackgroundImage);
+
+    //initial text color setup
+    setTextColor(textColorDark);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    var body = document.body;
+    var scrollPosition = window.scrollY;
+    var navbar = document.querySelector('.navbar');
+
+    function updateNavbar() {
+        // Add or remove 'dark-mode' class based on your condition
+        if (window.scrollY > scrollPosition) {
+            // Scrolling down, enable dark mode
+            body.classList.add('dark-mode');
+        } else if (window.scrollY === 0) {
+            // At the top, revert to light mode
+            body.classList.remove('dark-mode');
+        }
+
+        // Update scroll position
+        scrollPosition = window.scrollY;
+    }
+
+    // Listen for scroll events
+    window.addEventListener("scroll", updateNavbar);
+
+    // Initial setup
+    updateNavbar();
+});
     
